@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BG3 SE Console Commands</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        color: #f1f1f1;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #131313;
+        margin: 10px;
+        padding: 10px;
+    }
+
+    h1, h2, h3, p {
+        margin-left: 10px;
+        color: #9e9e9e;
+    }
+
+    .command {
+        font-family: "Source Code Pro", monospace;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+
+        background-color: #252525;
+        padding: 10px;
+        margin: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    .command:hover {
+        background-color: #3c3c3c;
+    }
+    .command:active {
+        background-color: #424242;
+    }
+</style>
+<body>
+    <div>
+        <h1>BG3 SE Console Commands</h1>
+        <p>Click on a command to copy it to your clipboard.</p>
+        <h2>Items</h2>
+        <h3>Add item to inventory</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">TemplateAddTo("UUID", GetHostCharacter(), X)</div>
+        <h3>Add gold</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">AddGold(GetHostCharacter(), X)</div>
+        <h3>Set tadpole state</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">SetTadpoleTreeState(GetHostCharacter(), X)</div>
+        <p><i>1: Hesitant to use worm powers, 2: Ready to use worm powers</i></p>
+        <h3>Add tadpoles</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">AddTadpole(GetHostCharacter(), X)</div>
+        <h3>Add inspiration</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">Osi.GiveInspirationPoints(GetHostCharacter(), X, "", "")</div>
+        <h2>Leveling</h2>
+        <h3>Add experience</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">Osi.AddExplorationExperience(GetHostCharacter(), X)</div>
+        <h3>Set level</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">Ext.Entity.Get(GetHostCharacter()).AvailableLevel.Level=X</div>
+        <h3>Set current experience</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">Ext.Entity.Get(GetHostCharacter()).Experience.CurrentLevelExperience=X</div>
+        <h3>Set experience to next level</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">Ext.Entity.Get(GetHostCharacter()).Experience.NextLevelExperience=X</div>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">Ext.Entity.Get(GetHostCharacter()).Experience.TotalExperience=X</div>
+        <h3>Respec</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">Osi.StartRespec(GetHostCharacter())</div>
+        <h2>Other</h2>
+        <h3>Change appearance</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">Osi.StartChangeAppearance(GetHostCharacter())</div>
+        <h3>Change approval</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">Osi.ChangeApprovalRating("COMPANION UUID", GetHostCharacter(), 0, X)</div>
+        <h3>Set max party size</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">SetMaxPartySizeOverride(X)</div>
+        <h3>Recheck party size limit</h3>
+        <div class="command" onclick="navigator.clipboard.writeText(this.innerHTML)">Osi.PROC_CheckPartyFull()</div>
+    </div>
+</body>
+</html>
