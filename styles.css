@@ -1,0 +1,71 @@
+* {
+    color: #f1f1f1;
+}
+
+body {
+    font-family: "PT Serif", serif;
+    background-color: #19140f;
+    margin: 10px;
+    padding: 10px;
+}
+
+input {
+    font-family: "Libertinus Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: black;
+    color: #f1f1f1;
+    border: #b99b77 solid 1px;
+    padding: 5px;
+    width: auto;
+}
+
+h1, h2, h3, p {
+    color: #b99b77;
+}
+
+h2 {
+    border-bottom: #b99b77 solid 1px;
+    padding-bottom: 5px;
+    margin-top: 40px;
+}
+
+.command {
+    font-family: "Libertinus Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    background-color: black;
+    border: #b99b77 solid 1px;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.command:hover {
+    background-color: #3c3c3c;
+}
+
+.command:active {
+    background-color: #424242;
+}
+
+.amount {
+    color: mediumvioletred;
+}
+
+.uuid {
+    color: teal;
+}
+
+.braces {
+    color: darkorange;
+}
+
+.character {
+    color: mediumpurple;
+}
